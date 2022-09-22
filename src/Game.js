@@ -1,6 +1,8 @@
 import {BrowserRouter,Routes,Route, Link, Switch} from 'react-router-dom'
+import Juego from './component/Juego'
 
 export default function Game()
+
 {
     return(
         <>
@@ -16,7 +18,7 @@ export default function Game()
             </ul>
         </nav>
             <Routes>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Juego/>}/>
             
             
             <Route path="about" element={<About/>}/>   
@@ -34,14 +36,7 @@ export default function Game()
         
     )
 }
-function Home()
-{
-    return(
-        <>
-        <h1>Home page</h1>
-        </>
-    )
-}
+
 function About()
 {
     return(
