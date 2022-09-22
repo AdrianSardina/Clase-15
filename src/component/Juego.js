@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Row ,Col, Button} from "react-bootstrap";
 import Card from 'react-bootstrap/Card';
 
-export default function Juego(props)
+export default function Juego()
 {
     const imagenes = ["../img/piedra.png","../img/papel.png","../img/tijera.png","../img/pregunta.png"]
    

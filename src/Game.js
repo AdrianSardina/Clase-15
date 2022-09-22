@@ -1,6 +1,8 @@
 import {BrowserRouter,Routes,Route, Link, Switch} from 'react-router-dom'
-import Juego from './component/Juego'
-
+import Juego from './component/Juego';
+import Home from './component/Home';
+import About from './component/About';
+import Nav from 'react-bootstrap/Nav';
 export default function Game()
 
 {
@@ -8,23 +10,28 @@ export default function Game()
         <>
        
         <BrowserRouter>
-        <h1>hola</h1>
-        <nav>
-            <ul>
-                <li>    <Link to="/">Home</Link>       </li>
-                <li>    <Link to="about">About</Link>       </li>
-                <li>    <Link to="tablero">Tablero</Link>   </li>
-                
-            </ul>
-        </nav>
+       
+        <Nav fill variant="tabs" defaultActiveKey="/home">
+        <Nav.Item>
+        <li>    <Link to="/">Home</Link></li> 
+        
+        </Nav.Item>
+        <Nav.Item>
+        <li>    <Link to="about">About</Link>       </li>
+        </Nav.Item>
+        <Nav.Item>
+        <li>    <Link to="tablero">Tablero</Link>   </li>
+        </Nav.Item>
+       </Nav>
+        
             <Routes>
-            <Route path="/" element={<Juego/>}/>
+            <Route path="/" element={<Home/>}/>
             
             
             <Route path="about" element={<About/>}/>   
             
             
-            <Route path="tablero" element={<Tablero/>}/>   
+            <Route path="tablero" element={<Juego/>}/>   
             
            
             <Route path="*" element={<Error/>}/>   
@@ -37,22 +44,8 @@ export default function Game()
     )
 }
 
-function About()
-{
-    return(
-        <>
-        <h1>About page</h1>
-        </>
-    )
-}
-function Tablero()
-{
-    return(
-        <>
-        <h1>Tablero page</h1>
-        </>
-    )
-}
+
+
 function Error()
 {
     return(
