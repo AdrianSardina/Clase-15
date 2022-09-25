@@ -25,7 +25,7 @@ export default function Game()
        </Nav>
         
             <Routes>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Home style={{ backgroundColor:"#D4CDCD" }}></Home>}/>
             
             
             <Route path="about" element={<About/>}/>   
@@ -37,7 +37,7 @@ export default function Game()
             <Route path="*" element={<Error/>}/>   
             </Routes>
 
-            <footer> pie de pagina</footer>
+            
         </BrowserRouter>
         </>
         

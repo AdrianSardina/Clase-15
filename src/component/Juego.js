@@ -27,39 +27,42 @@ export default function Juego()
     }else if((n1 == 0 && n2 == 2) || (n1 == 1 && n2 ==0)||(n1 == 2 && n2 ==1))
         {
             setPuntos1(puntos1+1);
-            setResultado("gano 1");
+            setResultado("Jugador 1 gano");
         }else{
             setPuntos2(puntos2 +1);
-            setResultado("gano 2");
+            setResultado("Jugador 2 gano");
         } 
     }
+
     const [resultado,setResultado] = useState ("Comenzar a jugar");
     return(
         <>
-        <Row className="justify-content-md-center"  >
-            <Col >
-            <Card border='dark' style={{ width: '40%' }}>
+        <Row className="justify-content-xl-center"  >
+            <Col xs={4}>
+            <Card border='dark' style={{ width: '60%' }}>
             <Card.Header><h2>Jugador 1</h2></Card.Header>
             <Card.Img variant="top" src={imagenes[opcion1]} />
             <Card.Body>
-            <h1> puntos1:  {puntos1}</h1>
+            <h1> Puntos:  {puntos1}</h1>
             </Card.Body>
              </Card>
             </Col>
-            <Col >
-            <Card border='dark' style={{ width: '40%' }}>
+            <Col xs={2}> <h3> {resultado}  </h3>  </Col>
+            <Col  xs={4} >
+            
+            <Card border='dark' style={{ width: '60%' }}>
             <Card.Header><h2>Jugador 2</h2></Card.Header>
             <Card.Img variant="top" src={imagenes[opcion2]} />
             <Card.Body>
-            <h1> puntos1:  {puntos2}</h1>
+            <h1> Puntos:  {puntos2}</h1>
             </Card.Body>
             </Card>
         </Col>
         
         </Row>
-
-        <p>Resultado: {resultado}  </p>
-        <Button onClick={jugarRonda}>jugar</Button>
+        
+        
+        <Button variant="secondary" onClick={jugarRonda}>jugar</Button>
         </>
     )
 }

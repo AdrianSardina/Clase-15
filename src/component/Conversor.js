@@ -14,7 +14,7 @@ function Conversor({valor})
         <h2>Monto en pesos </h2>
         <input type="text" onChange={e=> setPesos(e.target.value)}/>
         <button onClick={Convertir}>Convertir a dolares</button>
-        <p>Los {pesos} equivalesn a {monto.toFixed(2)}</p>
+        <p>Los {pesos} equivale a {monto.toFixed(2)}</p>
         </>
     )
 }
