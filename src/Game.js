@@ -25,7 +25,7 @@ export default function Game()
        </Nav>
         
             <Routes>
-            <Route path="/" element={<Home style={{ backgroundColor:"#D4CDCD" }}></Home>}/>
+            <Route path="/" element={<Home></Home>}/>
             
             
             <Route path="about" element={<About/>}/>   
